@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int toplam = 0;
+    int carpim = 1;
+
+    // Kullanıcıdan n sayısını al
+    printf("Bir sayi girin (n): ");
+    scanf("%d", &n);
+
+    // 1'den n'e kadar döngü
+    for (int i = 1; i <= n; ++i) {
+        // 9'a tam bölünebilen sayıları bul ve toplama ekle
+        if (i % 9 == 0) {
+            toplam += i;
+        }
+    }
+
+    // 4'ün çarpımını bul
+    for (int j = 1; j <= 4; ++j) {
+        carpim *= j;
+    }
+
+    // Sonuçları ekrana yazdır
+    printf("1'den %d'e kadar 9'a tam bölünebilen sayıların toplamı: %d\n", n, toplam);
+    printf("4'ün çarpımı: %d\n", carpim);
+
+    return 0;
+}
